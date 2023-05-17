@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const User = require('../../models/User');
+const {User} = require('../../models');
 
 // localhost:3001/user
 // get request
@@ -30,6 +30,9 @@ router.post("/sign-up", (req,res) => {
     res.json(err)
 })
  });
+
+
+ //localhost:3001/user/id
 
 
 
