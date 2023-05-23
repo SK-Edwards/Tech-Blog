@@ -1,0 +1,44 @@
+{{!-- <head>
+  <link rel="stylesheet" href="./css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+ --}}
+
+
+
+<section class="container row justify-between">
+  <div class="col-3" >
+    <p class="text-center">
+      User Name:</p>
+    <p>{{user_name}}</p>
+  </div>
+
+  <div class="col-3" >
+    <p class="text-center">
+      Email:</p>
+    <p>{{email}}</p>
+  </div>
+</section>
+
+
+
+<div class="row">
+  <p> Blog Submission:</p>
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s6">
+            <input id="input_text" type="text" data-length="10">
+            <label for="input_text">Blog Submition Title</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <textarea id="textarea2" class="materialize-textarea" data-length="120"></textarea>
+            <label for="textarea2">Submission Content</label>
+          </div>
+        </div>
+      </form>
+    </div>
+   {{!-- <script src="./js/script.js" ></script> --}}

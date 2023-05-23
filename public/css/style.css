@@ -26,9 +26,12 @@ body {
 
   .container {
     display: flex;
+    justify-content: space-between;
     width: 90%;
     margin-top: 50px;
     font-family: 'Permanent Marker', cursive;
     border: 5px solid grey
 
   }
+
+  

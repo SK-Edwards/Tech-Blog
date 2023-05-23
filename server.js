@@ -6,7 +6,7 @@ const exphbs = require('express-handlebars');
 const PORT = process.env.PORT || 3001;
 
 const app = express();
-const models = require('./models')
+
 
 // To access public content.
 app.use(express.static(path.join(__dirname, 'public')))
