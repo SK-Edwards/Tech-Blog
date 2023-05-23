@@ -1,13 +1,15 @@
 const express = require('express');
+const path = require("path");
 const controllers = require('./controllers')
 const sequelize = require('./config/connection');
+const exphbs = require('express-handlebars');
 const PORT = process.env.PORT || 3001;
-const exphbs = require('express-handlebars')
+
 const app = express();
 const models = require('./models')
 
 // To access public content.
-app.use(express.static('public'))
+app.use(express.static(path.join(__dirname, 'public')))
 
 
 // This is needed to make post requests

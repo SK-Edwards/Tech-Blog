@@ -1,4 +1,34 @@
 body {
-    background-color: burlywood;
-    border: 10px black solid;
-}
+    font-family: 'Permanent Marker', cursive;
+    background-color: whitesmoke;
+    border: 5px black solid;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+  .heading {
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
+    font-family: 'Permanent Marker', cursive;
+
+
+  }
+
+  #card {
+    width: 400px;
+    height: 400px;
+  }
+
+  .container {
+    display: flex;
+    width: 90%;
+    margin-top: 50px;
+    font-family: 'Permanent Marker', cursive;
+    border: 5px solid grey
+
+  }
