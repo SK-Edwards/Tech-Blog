@@ -1,9 +1,10 @@
 body {
     font-family: 'Permanent Marker', cursive;
-    background-color: whitesmoke;
-    border: 5px black solid;
+    background-color: rgb(36, 24, 24);
+    border: 5px rgb(72, 12, 12) solid;
     display: flex;
     min-height: 100vh;
+    color: whitesmoke;
     flex-direction: column;
   }
 
@@ -30,8 +31,13 @@ body {
     width: 90%;
     margin-top: 50px;
     font-family: 'Permanent Marker', cursive;
-    border: 5px solid grey
+    border: 5px solid rgb(253, 247, 247);
+    color: whitesmoke
 
   }
 
+  .input-field {
+
+    background-color : #d1d1d1; 
   
+  }

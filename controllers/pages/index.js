@@ -6,11 +6,22 @@ router.get('/', (req, res) => {
 
 });  
 
-// router.get('/dashboard', (req, res) => {
+router.get('/dashboard', (req, res) => {
   
-//     res.render('dashboard')
-// })
+    res.render('dashboard')
+});
 
+router.get('/homepage', (req, res) => {
+    res.render('homepage')
+});
+
+router.get('/login', (req, res) => {
+    res.render('login')
+});
+
+router.get('/signup', (req, res) => {
+    res.render('signup')
+})
 
 router.get('/dashboard/:id', async (req, res) => {
     const userData = await User.findByPk(req.params.id, {

@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require("path");
+const session = require("express-session");
 const controllers = require('./controllers')
 const sequelize = require('./config/connection');
 const exphbs = require('express-handlebars');
@@ -8,14 +9,12 @@ const PORT = process.env.PORT || 3001;
 const app = express();
 
 
-// To access public content.
-app.use(express.static(path.join(__dirname, 'public')))
-
-
-// This is needed to make post requests
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-
+const sess = {
+  secret: "Super secret secret",
+  resave: false,
+  saveUninitialized: false,
+};
+app.use(session(sess));
 
 // This is needed to use handlebars.
  const hbs = exphbs.create({});
@@ -25,6 +24,11 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(controllers);
 
+// This is needed to make post requests
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+// To access public content.
+app.use(express.static(path.join(__dirname, '/public')))
 
 
 
