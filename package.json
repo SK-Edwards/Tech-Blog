@@ -1,5 +1,5 @@
 {
-  "name": "y",
+  "name": "The Long Walk",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/SK-Edwards/Tech-Blog#readme",
   "dependencies": {
+    "bcrypt": "^5.1.0",
+    "connect-session-sequelize": "^7.1.7",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "express-handlebars": "^7.0.7",

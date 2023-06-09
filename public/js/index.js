@@ -31,4 +31,35 @@ const formSubmission = async (e) => {
     }
 }
 
+const postForm = document.getElementById('postForm')
+
+const postSubmission = async (e) => {
+    e.preventDefault();
+
+    const postTitle = document.getElementById('post_title').value;
+    ocnsole.log(postTitle);
+    const postContent = document.getElementById('post_content').value;
+    console.log(postContent);
+    const postPoster = document.getElementById('poster').value;
+    console.log(postPoster);
+  
+
+    const postValue = await fetch('/dashboard/:id', {
+        method: 'POST',
+        body: JSON.stringify({
+            post_title: postTitle,
+            post_content: postContent,
+            poster: postPoster,
+            user_Id: req.params.id
+        }),
+        headers: {'Content-Type': 'application/json'}
+    });
+    if(postValue.ok) {
+        alert('Post Made')
+    } else {
+        alert('Failed to Post')
+    }
+} 
+
+
 userForm.addEventListener('submit', formSubmission);
